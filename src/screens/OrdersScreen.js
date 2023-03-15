@@ -13,12 +13,12 @@ export const OrdersScreen = () => {
       <Text style={styles.header}>Orders</Text>
       <ScrollView>
         {orders.map(order => (
-          <View key={order.id} style={styles.order}>
+          <View testID='orders-list' key={order.id} style={styles.order}>
             <View>
               <Text style={styles.dateText}>Ordered: {order.date}</Text>
             </View>
             <MenuItem item={order.item}>
-              <View style={StyleSheet.flatten([styles.row, styles.space])}>
+              <View testID='orders-item' style={StyleSheet.flatten([styles.row, styles.space])}>
                 <Text style={styles.orderInfo}>Size: {order.size}</Text>
                 <Text style={styles.orderInfo}>Total: {order.total}</Text>
                 <Text style={styles.orderInfo}>Status: {order.status}</Text>

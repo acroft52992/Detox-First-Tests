@@ -51,7 +51,7 @@ export const BuildScreen = ({ navigation }) => {
       </View>
       <View style={styles.section}>
         <Text style={styles.heading}>Selected Toppings</Text>
-        <View style={styles.row}>
+        <View testID='selected-toppings' style={styles.row}>
           {selectedToppings.map((topping, idx) => (
             <TouchableOpacity
               key={`${topping}_${idx}`}

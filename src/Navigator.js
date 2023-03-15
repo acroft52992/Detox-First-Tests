@@ -19,7 +19,12 @@ const MenuNavigator = () => (
 
 export const Navigator = () => (
   <Tab.Navigator>
-    <Tab.Screen name="Menu" component={MenuNavigator} />
-    <Tab.Screen name="Orders" component={OrdersScreen} />
+    <Tab.Screen name="Menu" component={MenuNavigator}
+     options={{tabBarTestID: 'menu-tab-button'}}  />
+    <Tab.Screen name="Orders" component={OrdersScreen} 
+    options={{tabBarTestID: 'orders-tab-button'}} />
   </Tab.Navigator>
 );
+
+
+
